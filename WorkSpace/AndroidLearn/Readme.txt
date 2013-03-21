@@ -1,2 +1,2 @@
-�����Ҹ�ϰAndroidӦ�ÿ�������Դ����Ŀ¼
-Learn01��������Android�е���Դ����
+﻿这是我复习Android应用开发打测试代码的目录
+Learn01：第三章Android中的资源访问

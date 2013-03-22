@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -23,15 +24,15 @@ public class MainActivity extends Activity {
 	TextView textView;
 	Button showFire;
 	Button showDialog;
-	
+	Button changeButton;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 		textView=(TextView) findViewById(R.id.textView1);
-		showFire=(Button) findViewById(R.id.button2);
-		showDialog=(Button) findViewById(R.id.button1);
-		
+		showFire=(Button) findViewById(R.id.button1);
+		showDialog=(Button) findViewById(R.id.button2);
+		changeButton=(Button) findViewById(R.id.button3);
 		showFire.setOnClickListener(new OnClickListener() {
 			
 			@Override
@@ -49,7 +50,16 @@ public class MainActivity extends Activity {
 				showInfoDialog("这是一个对话框！");
 			}
 		});
-		
+	
+		changeButton.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View arg0) {
+				Intent i=new Intent(MainActivity.this, MainActivity2.class);
+				startActivity(i);
+				
+			}
+		});
 	}
 
 	@Override
